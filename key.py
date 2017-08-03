@@ -1,4 +1,5 @@
 import pygame
+import winsound
 
 BLACK = (  0,   0,   0)
 WHITE = (255, 255, 255)
@@ -18,8 +19,17 @@ class Key():
         pygame.draw.rect(self.screen, BLACK, (x_point, self.y_point, self.width, self.height),5)
         pygame.draw.rect( self.screen,WHITE, (x_point, self.y_point, self.width, self.height),0)
         
-    #def play(self):
+    def play(self):
         #plays the Key
         #should darken key
         #if key on keyboard is played... play audio file
         # and also darken the key
+
+        #NOT PLAYING PLEASE FIXXXXXX
+        if pygame.key.get_pressed()[pygame.K_c] != 0: 
+                winsound.PlaySound(this.note,winsound.SND_FILENAME)
+
+        
+
+        
+    
