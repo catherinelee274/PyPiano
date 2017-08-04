@@ -3,6 +3,7 @@ import pygame
 import random
 import winsound
 from key import Key
+from words import Words
 
 pygame.init()
 
@@ -27,7 +28,9 @@ screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
 
 pygame.display.set_caption("Piano Typing Game")
 
+#define class variables
 key1 = Key( screen, G4, "C")
+w1 = Words(screen)
 
 
 #Main Loop
@@ -40,6 +43,7 @@ while not done:
     screen.fill(WHITE)
     key1.draw(0)
     key1.play()
+    w1.drop()
     pygame.display.flip()
     clock.tick(60)
 
