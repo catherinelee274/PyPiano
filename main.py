@@ -27,7 +27,7 @@ screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
 
 pygame.display.set_caption("Piano Typing Game")
 
-key1 = Key( screen, G4, "C" )
+key1 = Key( screen, G4, "C")
 
 
 #Main Loop
@@ -39,6 +39,7 @@ while not done:
     #remember not to put another draw function before the screen fill
     screen.fill(WHITE)
     key1.draw(0)
+    key1.play()
     pygame.display.flip()
     clock.tick(60)
 

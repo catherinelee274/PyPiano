@@ -25,10 +25,14 @@ class Key():
         #if key on keyboard is played... play audio file
         # and also darken the key
 
-        #NOT PLAYING PLEASE FIXXXXXX
-        if pygame.key.get_pressed()[pygame.K_c] != 0: 
-                winsound.PlaySound(this.note,winsound.SND_FILENAME)
-
+        #figure out how to make k_[self.key]
+        #temp is C
+        
+#HAD TO HARD CODE THE X_POINT !!!
+#WHY IS IT RANDOMLY BECOMING BLACK?????
+        if pygame.key.get_pressed()[pygame.K_c] != 0:
+            pygame.draw.rect( self.screen,BLACK, (0, self.y_point, self.width, self.height),0)
+            winsound.PlaySound(self.note,winsound.SND_FILENAME)
         
 
         
