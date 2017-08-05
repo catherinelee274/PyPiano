@@ -30,10 +30,12 @@ pygame.display.set_caption("Piano Typing Game")
 
 #define class variables
 key1 = Key( screen, G4, "C")
-w1 = Words(screen)
 
+#init list of words 
+wordList = []
 
 #Main Loop
+
 while not done:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -43,7 +45,13 @@ while not done:
     screen.fill(WHITE)
     key1.draw(0)
     key1.play()
+    w1 = Words(screen)
+
     w1.drop()
+    wordList.append(w1)
+    for elem in wordList:
+        elem.drop()
+
     pygame.display.flip()
     clock.tick(60)
 
