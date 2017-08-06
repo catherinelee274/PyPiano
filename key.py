@@ -1,6 +1,8 @@
 import pygame
 import winsound
 
+# can come way l8ter
+
 BLACK = (  0,   0,   0)
 WHITE = (255, 255, 255)
 
@@ -18,7 +20,7 @@ class Key():
         #CHANGE T H I C C N E S S TO BLACK
         pygame.draw.rect(self.screen, BLACK, (x_point, self.y_point, self.width, self.height),5)
         pygame.draw.rect( self.screen,WHITE, (x_point, self.y_point, self.width, self.height),0)
-        
+
     def play(self):
         #plays the Key
         #should darken key
@@ -27,13 +29,9 @@ class Key():
 
         #figure out how to make k_[self.key]
         #temp is C
-        
+
 #HAD TO HARD CODE THE X_POINT !!!
 #WHY IS IT RANDOMLY BECOMING BLACK?????
         if pygame.key.get_pressed()[pygame.K_c] != 0:
             pygame.draw.rect( self.screen,BLACK, (0, self.y_point, self.width, self.height),0)
             winsound.PlaySound(self.note,winsound.SND_FILENAME)
-        
-
-        
-    
