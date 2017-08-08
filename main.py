@@ -51,6 +51,8 @@ while not done:
     wordList.append(w1)
     for elem in wordList:
         elem.drop()
+    if(len(wordList)) >5:
+        wordList = wordList[:5]
 
     pygame.display.flip()
     clock.tick(60)
