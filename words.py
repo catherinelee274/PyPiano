@@ -23,7 +23,9 @@ class Words():
 
         self.screen.blit(textsurface,(self.x_point,self.y_point))
         
-        if self.y_point == 600:
-            self.y_point = 0
+        #if self.y_point == 600:
+            #self.y_point = 0
+            #if either it reaches bottom or everything is typed out...
+            #make it delete from list
             
         

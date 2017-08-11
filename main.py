@@ -1,4 +1,4 @@
-
+from time import sleep
 import pygame
 import random
 import winsound
@@ -50,10 +50,12 @@ while not done:
     w1.drop()
     wordList.append(w1)
     for elem in wordList:
+
         elem.drop()
+        
     if(len(wordList)) >5:
         wordList = wordList[:5]
-
+    #if any element in wordlist hits floor, delete word
     pygame.display.flip()
     clock.tick(60)
 
