@@ -47,11 +47,18 @@ while not done:
     key1.play()
     w1 = Words(screen)
 
+    w1.draw()
     w1.drop()
-    wordList.append(w1)
-    for elem in wordList:
 
+    wordList.append(w1)
+    if(w1.getY == 400 ):
+        w2 = Words(screen)
+        w2.drop()
+        wordList.append(w2)
+    for elem in wordList:
+        elem.draw()
         elem.drop()
+    
         
     if(len(wordList)) >5:
         wordList = wordList[:5]
