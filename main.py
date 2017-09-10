@@ -43,28 +43,37 @@ while not done:
 
     #remember not to put another draw function before the screen fill
     screen.fill(WHITE)
+    
     key1.draw(0)
     key1.play()
+    
     w1 = Words(screen)
 
     w1.draw()
     w1.drop()
 
     wordList.append(w1)
-    if(w1.getY == 400 ):
-        w2 = Words(screen)
-        w2.drop()
-        wordList.append(w2)
+    
+        
+        
     for elem in wordList:
         elem.draw()
         elem.drop()
+        print(elem.getY)
+        if(elem.getY == 400):
+            
+            w2 = Words(screen)
+            w2.drop()
+            wordList.append(w2)
+            
     
         
-    if(len(wordList)) >5:
-        wordList = wordList[:5]
-    #if any element in wordlist hits floor, delete word
+    #if(len(wordList)) >5:
+     #   wordList = wordList[:5]
+    #if any element in wordlist hits floor add to array of words and when it gets to max, end game
     pygame.display.flip()
     clock.tick(60)
+    
 
 pygame.quit()
 exit()
