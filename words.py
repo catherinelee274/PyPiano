@@ -10,6 +10,9 @@ class Words():
         self.x_point = random.randint(0,800)
         self.y_point = 0
         self.word = rw.random_word()
+        self.wordList = list(self.word)
+        
+        
     def getY(self):
         return self.y_point
 
